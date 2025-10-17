@@ -1,0 +1,95 @@
+/* universal section  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#red {
+    background: red;
+    color: white;
+}
+
+#blue {
+    background: blue;
+    color: white;
+}
+
+#green {
+    background: green;
+    color: white;
+}
+
+#yellow {
+    background: yellow;
+    color: white;
+}
+
+/* body section */
+body {
+    font-family: 'Poppins';
+    height: 100vh;
+}
+
+/* main section  */
+#main {
+
+
+    /* main-heading  */
+    h1 {
+        text-align: center;
+        background: #f0f0f0;
+        font-weight: 400;
+        padding: 15px 0;
+    }
+
+    /* main card section  */
+    #item-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        gap: 40px;
+
+        /* main card section  */
+        #card {
+            width: 100px;
+            aspect-ratio: 1;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            box-shadow: 0px 0px 1px black;
+            font-weight: 400;
+        }
+    }
+
+    /* input box section */
+    #input-box {
+        text-align: center;
+
+
+        /* input box  */
+        input {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: .1px solid gray;
+            font-size: 1rem;
+        }
+
+        /* input hover active  */
+        input:hover,
+        :active {
+            border: .1px solid gray;
+        }
+
+        /* input button  */
+        button {
+            padding: 10px 10px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+    }
+}
