@@ -14,5 +14,7 @@ function greetUser() {
 
 function changeColor(element, color) {
     element.style.background = color;
-    element.style.color = "white";
+    if (color != "yellow") {
+        element.style.color = "white";
+    }
 }
