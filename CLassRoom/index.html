@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Named Areas - Pro Level</title>
+    <style>
+        /* CONTAINER - Pro Setup */
+        .container {
+            display: grid;
+            height: 100vh;
+            /* Pura screen */
+
+            /* 1. Line Names + Sizes */
+            grid-template-columns:
+                [main-start] 1fr [sidebar-start] 300px [main-end];
+
+            grid-template-rows:
+                [header] 80px [content] 1fr [footer] 60px;
+
+            /* 2. Named Areas (Visual Layout) */
+            grid-template-areas:
+                "header  header  header"
+                "main    main    sidebar"
+                "footer  footer  footer";
+
+            gap: 10px;
+            background: #f4f4f4;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ITEMS - Super Easy Placement */
+        .header {
+            grid-area: header;
+            background: #e74c3c;
+            color: white;
+        }
+
+        .main {
+            grid-area: main;
+            background: #3498db;
+            color: white;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #27ae60;
+            color: white;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #9b59b6;
+            color: white;
+        }
+
+        /* Common Style */
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box header">HEADER</div>
+        <div class="box main">MAIN CONTENT</div>
+        <div class="box sidebar">SIDEBAR</div>
+        <div class="box footer">FOOTER</div>
+    </div>
+
+</body>
+
+</html>
