@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* ── Reset ─────────────────────────────────────── */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ── Grid container ─────────────────────────────── */
+        .product-list {
+            display: grid;
+            /* 1 column on tiny screens, then 2, 3, … as space allows */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            /* center the whole grid */
+        }
+
+        /* ── Card (product) ─────────────────────────────── */
+        .product {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background: #fff;
+            /* optional card bg */
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+            transition: all transform .2s;
+        }
+
+        .product:hover {
+            transform: translateY(-4px);
+        }
+
+        .product img {
+            width: 100%;
+            height: 260px;
+            /* fixed height → same-size images */
+            object-fit: cover;
+        }
+
+        .product p {
+            margin-top: .75rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .product span {
+            margin-top: .25rem;
+            color: #555;
+            font-size: .95rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="product-list">
+
+        <!-- ==== ONE PRODUCT CARD ==== -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- Repeat the block above for every product -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=700"
+                alt="">
+            <p>Duramo SL</p>
+            <span>$56.00</span>
+        </div>
+
+        <!-- …add as many as you need… -->
+
+    </div>
+</body>
+
+</html>

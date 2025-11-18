@@ -18,3 +18,4 @@ function changeColor(element, color) {
         element.style.color = "white";
     }
 }
+

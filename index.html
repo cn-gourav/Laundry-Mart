@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-container</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        .container {
+            display: grid;
+            height: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 10vh 60vh 10vh 20vh 20vh 20vh 10vh;
+            grid-template-areas:
+                "header header"
+                "main main"
+                "main-bottom main-bottom"
+                'service service'
+                "something something"
+                'subscribe subscribe'
+                "footer footer";
+        }
+
+
+
+
+        /* header-section  */
+        .header {
+            grid-area: header;
+            width: 100%;
+            gap: 10px;
+            padding: 1rem;
+            background: pink;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+
+
+        /* main--section */
+        .main {
+            grid-area: main;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            background: #feeffe;
+        }
+
+        .main-left {
+            height: 100%;
+            width: 100%;
+            background: #3498db;
+            color: white;
+            /* display: flex; */
+            flex-direction: column;
+            justify-content: center;
+            justify-items: start;
+        }
+
+
+        .main-right {
+            /* width: 40%; */
+            height: 100%;
+            width: 100%;
+            background: #e74c3c;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        .main-bottom {
+            grid-area: main-bottom;
+            background: #3fa9fa;
+            color: white;
+            height: 100%;
+            width: 100%;
+            padding: 2rem;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+
+        /* service-section  */
+        .service {
+            grid-area: service;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background: #feeffe;
+        }
+
+        .l-service {
+            height: 100%;
+            width: 100%;
+            background: #e74c3c;
+            color: white;
+
+            flex-direction: column;
+
+
+        }
+
+        .r-service {
+            height: 100%;
+            width: 100%;
+            background: burlywood;
+            flex-direction: column;
+        }
+
+        /* somoething section s */
+        .something {
+            grid-area: something;
+            background: #feeffe;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            flex-wrap: wrap;
+        }
+
+        .support {
+            width: 20%;
+            height: 100%;
+            background: #2b4860;
+            color: white;
+        }
+
+        /* subscribe section  */
+        .subscribe {
+            grid-area: subscribe;
+            background: #e74c3c;
+            color: white;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        /* footer section s */
+        .footer {
+            grid-area: footer;
+            background: #9b59b6;
+            color: white;
+            justify-content: space-around;
+            align-items: start;
+            flex-wrap: wrap;
+        }
+
+
+
+        .box {
+            display: flex;
+        }
+
+
+        @media(max-width: 400px) {
+            .header {
+                display: none;
+            }
+
+            .container {
+                grid-template-areas:
+                    "main main main main"
+                    "main-bottom main-bottom main-bottom main-bottom"
+                    'service service service service'
+                    "something something something something"
+                    'subscribe subscribe subscribe subscribe'
+                    "footer footer footer footer";
+            }
+
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="box header">Header</div>
+
+        <div class="box main">
+            <div class="box main-left">main-left</div>
+            <div class="box main-right">main-right</div>
+        </div>
+
+        <div class="box main-bottom">main-bottom</div>
+
+        <div class="box service">
+            <div class="box l-service">l-service</div>
+            <div class="box r-service">r-service</div>
+        </div>
+
+        <div class="box something">something</div>
+        <div class="box subscribe">subscribe</div>
+        <div class="box footer">footer</div>
+    </div>
+</body>
+
+</html>

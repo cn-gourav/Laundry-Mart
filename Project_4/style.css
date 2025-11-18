@@ -7,15 +7,283 @@
     font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+body {
 
-.main {
+    transition: .1s all;
+}
+
+.circle {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    background: red;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .08s ease-out;
+    z-index: 9999;
+    opacity: .5;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+.para {
+    font-size: .9rem;
+    font-weight: 400;
+    color: gray;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mt1 {
+    margin-top: .5rem;
+}
+
+.mt2 {
+    margin-top: 1rem;
+}
+
+.input {
+    padding: .5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.container {
     display: grid;
-    row-gap: 10px;
-    column-gap: 20px;
-    grid-template-columns: 12fr;
-    grid-template-rows: 100% 100% 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "main-bottom main-bottom main-bottom main-bottom"
+        'service service service service'
+        "something something something something"
+        'subscribe subscribe subscribe subscribe'
+        "footer footer footer footer";
+    gap: 10px;
+}
+
+
+
+
+/* header-section  */
+.header {
+    grid-area: header;
+    width: 100%;
+    gap: 10px;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.nav-link ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    li {
+        list-style: none;
+    }
+}
+
+.btn {
+    padding: .7rem 1rem;
+    border-radius: 10px;
+    border: none;
+    background: rgb(78, 181, 251);
+    color: white;
+    cursor: pointer;
+
+}
+
+/* main--section */
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    background: #feeffe;
+}
+
+.main-left {
+    height: 100%;
+    width: 40%;
+    /* background: #3498db; */
+    /* color: white; */
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    justify-items: start;
+}
+
+
+.main-right {
+    width: 40%;
+    height: 100%;
+    /* background: #e74c3c; */
+    /* color: white; */
+    justify-content: center;
+    align-items: center;
+}
+
+.main-right img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+.main-bottom {
+    grid-area: main-bottom;
+    background: #3fa9fa;
+    /* color: white; */
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* service-section  */
+.service {
+    grid-area: service;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background: #feeffe; */
+}
+
+.l-service {
+    height: 100%;
+    width: 40%;
+    /* background: #e74c3c; */
+    /* color: white; */
+
+    flex-direction: column;
+
+
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .item-list {
+        display: flex;
+        gap: 24px;
+    }
+}
+
+.r-service {
+    height: 100%;
+    width: 43%;
+    /* background: burlywood; */
+
+    flex-direction: column;
+}
+
+/* somoething section s */
+.something {
+    grid-area: something;
+    background: #feeffe;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+.support {
+    width: 20%;
+    height: 100%;
+    /* background: #2b4860; */
+    /* color: white; */
+}
+
+/* subscribe section  */
+.subscribe {
+    grid-area: subscribe;
+    /* background: #e74c3c; */
+    /* color: white; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* footer section s */
+.footer {
+    grid-area: footer;
+    /* background: #9b59b6; */
+    /* color: white; */
+    justify-content: space-around;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .box {
-    background: red;
+    display: flex;
+}
+
+
+@media (width < 600px) {
+    .container {
+        grid-template-areas:
+            "header header "
+            "main"
+            "main-bottom "
+            "l-service"
+            "r-service"
+            "something "
+            "subscribe"
+            "footer ";
+    }
+
+    .main {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+
+    .service {
+        flex-direction: column;
+    }
+
+
 }
